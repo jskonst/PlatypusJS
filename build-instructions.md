@@ -45,7 +45,7 @@ This will build Platypus.js components and libraries and will put theirs *.jar f
 Note, that `libs.javaee-web-api-7.0.classpath` property points to JavaEE 7 Web profile libraries `servlet-api.jar`, and `websocket-api.jar`. It is not necessary, that they will be from Tomcat server. They may by taken from anywhere else.
 Moreover, these libraries may be combined into single file (for example `javaee-web-api-7.0.jar` from NetBeans).
 3. Type `ant -f ./designer/build.xml clean build` on the command line.
-This will build Platypus IDE and will put it to `./designer/build` folder.
+This will build Platypus IDE and will put it to `./designer/build` folder. Note - you may also need to add this two parameters -Dnbplatform.default.harness.dir=/home/your-home-dir/your-netbeans-dir/harness/ -Dnbplatform.default.netbeans.dest.dir=/home/your-home-dir/your-netbeans-dir/
 4. Type `ant -Ddestdir=../../../application/bin -Dgwt.sdk=/home/your-home-dir/gwt-2.7.0 -f ./web-client/src/platypus/build.xml clean build copy-dest` on the command line.
 This will build Platypus.js browser client and will put it to `./application/bin/pwc` folder.
 
